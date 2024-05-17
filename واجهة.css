@@ -1,0 +1,137 @@
+/* تنسيق للواجهة*/ 
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* توسيط من اليمين ويسار*/
+    align-items: center; /* توسيط من فوق ومن تحت*/
+}
+/*لرسم الدائرة*/
+body::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: blue;
+    position: absolute;
+    z-index: -1;
+    clip-path: circle(40% at right 70% );
+}
+.container{
+    width: 80%;
+    height: 80%;
+    background: rgb(255,255,255,0.1); /*عمل الشكل زجاجي*/
+    border-radius: 20px;
+    overflow: hidden; /* اخفاء اي شي برى الكونتينر*/
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+nav .logo{
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 6px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+nav ul li a:hover{
+    color: blue;
+}
+.con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+.con .text{
+    color: white;
+    width: 40%;
+}
+.con .text h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.con .text p{
+    font-size: 18px;
+    line-height: 25px;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+.con .image{
+    width: 40%; 
+}
+.con .image img{
+    width: 400px;
+}
+/* لنعمل الشاشة متجاوبة*/
+@media (min-width:950px) and (max-width:1150px){
+    .con .image img{
+        width: 330px;
+    }
+}
+@media (max-width:950px){
+    .con, nav{
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+    nav{
+        position: relative;
+        z-index: 100;
+    }
+    .con .image, .con .text {
+        width: 80%;
+    }
+    .con .text h2{
+        font-size: 20px;
+        font-weight: 300;
+        margin-top: 110px;
+    }
+    body::after{
+        clip-path: circle(50% at bottom);
+    }
+}
+@media (max-width:650px){
+    nav{
+        position: relative;
+        z-index: 100;
+    }
+    .con .text h2{
+        font-size: 15px;
+        font-weight: 300;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .con .text p{
+     display: none;
+    }
+    body::after{
+        clip-path: circle(50% at bottom);
+    }
+}
+/* homeلتنسيق*/

@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family:'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+    transition: 0.7s;
+}
+body{
+    background-image: url(imags/15.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color: rgb(168, 35, 35);
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-top: 10rem;
+}
+.cor{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.crt{
+    background-color: rgba(0, 0, 0, 0.623);
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    margin-top: 8rem;
+    transition: 0.7s ease;
+}
+.crt:hover{
+    transform: scale(1.1);
+}
+.cor .icon{
+    color: rgb(59, 114, 151);
+    font-size: 8em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+.info h3{
+    color: rgb(12, 12, 236);
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+.info p{
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+    margin-top: 2rem;
+}
+.footer{
+    background-color: rgb(32, 32, 51);
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10rem;
+    width: 100%;
+}
+.you{
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+    color:rgb(168, 35, 35);
+}
+.you span{
+    color: white;
+}
+.footer .ics a{
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+    color: rgb(168, 35, 35);
+}
